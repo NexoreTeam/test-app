@@ -15,6 +15,6 @@ export class HeaderComponent {
     { label: 'About', path: '/about' },
   ];
   baseClass =
-    'flex items-center justify-between px-4 py-2 rounded-md transition-all hover:bg-blue-800 text-white';
+    'items-center justify-between px-4 py-2 rounded-md transition-all hover:bg-blue-800 text-white';
   activeClass = 'bg-blue-800 ring-2 ring-blue-300 text-white font-semibold';
 }

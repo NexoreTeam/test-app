@@ -1,23 +1,35 @@
-<nav class="bg-blue-950 text-white shadow">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      <div class="flex items-center space-x-3">
-        <img src="../../assets/logo.png" alt="Logo" class="h-10 w-auto" />
-        <span class="text-2xl tracking-wide">SOFTWAREVIET</span>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="bg-blue-950 text-white shadow">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center space-x-3">
+            <img src="../../assets/logo.png" alt="Logo" class="h-10 w-auto" />
+            <span class="text-2xl tracking-wide">SOFTWAREVIET</span>
+          </div>
 
-      <ul class="hidden md:flex space-x-8 text-sm font-medium">
-        <li *ngFor="let item of navItems">
-          <a
-            [routerLink]="item.path"
-            [routerLinkActive]="activeClass"
-            [routerLinkActiveOptions]="{ exact: item.exact || false }"
-            [ngClass]="baseClass"
-          >
-            {{ item.label }}
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+          <ul class="flex gap-4 text-2xl list-none font-bold">
+            <li *ngFor="let item of navItems">
+              <a
+                class="font-bold"
+                [routerLink]="item.path"
+                [routerLinkActive]="activeClass"
+                [routerLinkActiveOptions]="{ exact: item.exact || false }"
+                [ngClass]="baseClass"
+              >
+                {{ item.label }}
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </body>
+</html>
